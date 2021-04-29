@@ -24,10 +24,8 @@ function pedirDatos(pNumPag) {
 }
 
 
-//let seccionPersonajes = document.getElementById('characters');
-
 function pintarPersonajes(pListPersonajes) {
-    sectionCharacters.innerHTML = ""; //esto es para vaciar la seccion y que no se acumulen las 20 fotos.
+    sectionCharacters.innerHTML = "";
     pListPersonajes.forEach(character => {
 
         sectionCharacters.innerHTML += `<article>
@@ -37,27 +35,10 @@ function pintarPersonajes(pListPersonajes) {
         <h3>${character.name}</h3>
     </article>`
 
-        /* let article = document.createElement('article');
-        let div = document.createElement('div');
-        let h3 = document.createElement('h3');
-
-        let contentH3 = document.createTextNode(personaje.name);
-        let contentdiv = document.createTextNode(`<img src="${personaje.image}"`);
-
-        div.appendChild(contentdiv);
-        h3.appendChild(contentH3);
-
-        article.appendChild(div);
-        article.appendChild(h3);
-        seccionPersonajes.appendChild(article); */
     });
 }
 
 
-//botones de next y prev llamaran a una funcion que suba o baje una pagina el numPag es una variable global.
-
-
-//botones[0].disabled = true;
 let botones = document.getElementsByTagName('button');
 let paginaActual = 0;
 
@@ -75,11 +56,6 @@ function cargarPagina(event) {
     } else if (paginaActual === 34) {
         paginaActual = 34;
     }
-
-
-    //botones[0].disabled = (paginaActual !== 1) ? false : true;
-    //botones[1].disabled = (paginaActual !== 34) ? false : true;
-    //console.log(paginaActual);
     pedirDatos(paginaActual)
         .then(datos => pintarPersonajes(datos.results))
         .catch(error => console.log(error))
