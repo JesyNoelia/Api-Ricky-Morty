@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RICKY MORTY - BASICO PROMESAS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(231, 231, 231);
+        }
+
+        header {
+            background-color: grey;
+            box-shadow: 5px 5px 15px grey;
+            color: white;
+            font-size: 2em;
+            width: 100%;
+            text-align: center;
+            text-shadow: 5px 5px 15px black;
+            padding: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            margin: 20px;
+            padding: 20px;
+            width: 47%;
+            box-shadow: 5px 5px 15px grey;
+            font-size: 1.5em;
+            display: inline-block;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        article {
+            background-color: rgb(236, 236, 236);
+            max-width: 400px;
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid black;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px grey;
+            transition: 1s;
+        }
+
+        article img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        article:hover {
+            transform: scale(1.1);
+        }
+
+        article h3 {
+            font-size: 1.3em;
+            color: grey;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>PERSONAJES RICKY MORTY</header>
+
+    <button>Prev</button>
+    <button>Next</button>
+
+    <section id="characters">
+        <!-- <article>
+            <div>
+                <img src="https://rickandmortyapi.com/api/character/avatar/126.jpeg">
+            </div>
+            <h3>Nombre del personaje</h3>
+        </article> -->
+
+    </section>
+
+
+    <script src="js/api.js"></script>
+
+</body>
+
+</html>
